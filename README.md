@@ -78,21 +78,21 @@
 
 ## Visuals
 
-![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/IntelligentTransportationVisuals.png)
+![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/IntelligentTransportationVisuals.png)
 
 ## System design
 
 -  **System design diagram**
 
-   ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/SystemDiagram.png)
+   ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/SystemDiagram.png)
 
 -  **hardware architecture diagram**
 
-   ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/hardware_architecture.png)
+   ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/hardware_architecture.png)
 
 -  **software architecture diagram**
 
-   ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/software_architecture.png)
+   ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/software_architecture.png)
 
 ## Installation
 
@@ -132,19 +132,19 @@
    - Connect the sensors to your Wio terminal following  instructions provided by the system’s manufacturer.Ensure that the connections are made correctly and that the sensors are appropriately powered.You can read about more Wio Terminal in here:
      - https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/
 
-     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/wioTerminalOverview.png)
+     ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/wioTerminalOverview.png)
      
    **2.Software Setup:**
    - Open theArduino IDE on your computer.
    - Choose the correct port for your connected Arduino board within the Arduino IDE.you can follow these steps:
       1. Click on **Tools > Board Manager** and Search **Seeed SAMD Boards 1.8.3”** version in the Boards Manager.
      
-       ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/SeeedSAMD.png)
+       ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/SeeedSAMD.png)
      
       2. Select your board and port:
          You’ll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino. Selecting the **Wio Terminal**
      
-       ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/port-bord.png)
+       ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/port-bord.png)
      
    - Download the required libraries and dependencies for the Intelligent Transportation System.
       - For **ATLS**,The Traffic lights system implements traffic lights based on the Red,Yellow,Blue light sensors.And the traffic congestion detected by the Ultrasonic sensors ,To install the Ultrasonic library follow these steps:
@@ -163,15 +163,15 @@
         2. Type the name of the library **"rpcUnified”** hat we need and select the latest vision from the drop-down menu(if available)
         3. Click Install:
      
-     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/rpcUnified.png)
+     ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/rpcUnified.png)
      
    - For Wi-Fi on the WioTerminal.You can search for **"seeed rpcwifi"** library by typing the library name in the search box of **Arduino Library Manager**
 
-     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/rpcWifi.png)
+     ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/rpcWifi.png)
 
    - For send and receive MQTT messages Install the library **"PubSubClient”**,You can search by typing the library name in the search box of **Arduino Library Manager**.
 
-     ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/pubsubClient.png)
+     ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/pubsubClient.png)
 
    **3. Code Compilation and Upload:**
    - Once the code compiles successfully,upload it to the Wio terminal or the Arduino board you are using.
@@ -187,17 +187,17 @@
         - org.eclipse.paho.android.service-1.1.1.jar
         - org.eclipse.paho.client.mqttv3-1.2.5.jar
 
-   ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/librs.png)
+   ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/librs.png)
    - Define build configuration by following these:
 
-   ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/Configuration.png)
+   ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/Configuration.png)
    - Add Paho repository,Click **settings.gradle** add
 
            maven {
             url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
            }
 
-   ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/PahoRepository.png)
+   ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/PahoRepository.png)
 
    - In order to enable App to bind to Paho Android Service, the following information needs to be added in **AndroidManifest.xml**
 
@@ -207,17 +207,17 @@
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.READ_BASIC_PHONE_STATE" />
 
-   ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/PahoAnroidService.png)
+   ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/PahoAnroidService.png)
 
    - Declare the following services in **AndroidManifest.xml**
 
 
         <service android:name="org.eclipse.paho.android.service.MqttService" />
 
-   ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/AndroidManifest.png)
+   ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/AndroidManifest.png)
    - For used of  the Paho allowing  the MQTT connection
 
-   ![image](https://git.chalmers.se/courses/dit113/2023/group-9/intelligent-transportation/-/raw/main/Android/img/MQTTconnection.png)
+   ![image](https://raw.githubusercontent.com/YingchaoJiStone/IntelligentTransportation/main/Android/img/MQTTconnection.png)
 
    **6. Build and run the Android application on your device or emulator.**
 
